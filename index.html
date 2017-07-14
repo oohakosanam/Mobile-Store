@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MobileStore">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body class="container">
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="page-header"> MOBILE STORE </h2>
+    </div>
+</div>
+
+
+<div ng-controller="StoreController as store" class="row">
+<div ng-repeat="x in store.mobiles" class="col-md-6">
+    <br>
+
+    <img class="img-rounded" ng-src="{{x.image}}" width="200px" height="250px">
+    <p>Name:{{x.name}}</p>
+    <p> Color:{{x.color}}</p>
+    <p>Memory:{{x.memory}}</p>
+    <p>Price:&#8277;{{x.price}}</p>
+    <button class="btn btn-info" type="button" ng-hide="{{x.isSoldOut}}">Buy Now</button><br>
+  <ul class="nav nav-tabs">
+        <li role="presentation" ng-class="{'active':x.activeTab==='Description'}" > <a ng-click="store.setActiveTab(x,'Description')">Description</a></li>
+        <li role="presentation" ng-class="{'active':x.activeTab==='Specification'}"><a ng-click="store.setActiveTab(x,'Specification')">Specifications</a></li>
+        <li role="presentation" ng-class="{'active':x.activeTab==='Reviews'}"><a ng-click="store.setActiveTab(x,'Reviews')">Reviews</a></li>
+
+    </ul>
+<p ng-show="x.activeTab==='Description'">this is description</p>
+    <p ng-show="x.activeTab==='Specification'">this is specification</p>
+    <p ng-show="x.activeTab==='Reviews'">this is review</p>
+</div>
+</div>
+
+
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

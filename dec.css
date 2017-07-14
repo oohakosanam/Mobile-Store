@@ -1,0 +1,37 @@
+body{
+    background-color:floralwhite;
+}
+#tit{
+    color:darkturquoise;
+    font-family:verdana;
+    margin-left:240px;
+}
+.mobs{
+    color:darkslategray;
+    font-family:Calibri;
+    margin-left:140px;
+    font-size:20px;
+
+}
+
+#btn1{
+background-color: darkturquoise;
+    font-family: Calibri;
+    font-size: 20px;
+    color:white;
+    display:inline-block;
+    padding:10px;
+    border-radius: 3px;
+    cursor:pointer;
+    border:none;
+
+}
+#btn1:hover{
+    background-color:lightskyblue;
+    font-family: Calibri;
+    font-size: 21px;
+    color:white;
+    cursor:pointer;
+    box-shadow: 2px 2px 4px gray;
+
+}
